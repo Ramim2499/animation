@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+    <style>
+        .clock{
+            /* margin-left: auto;
+            margin-right: auto; */
+            width: 800px;
+            height: 800px;
+            background: url(/clock.png);
+            background-color:aqua;
+            border: 50px solid black;
+            border-radius: 50%;
+            position: relative;
+            margin: 25px auto;
+            animation: rotate-clock 0s linear infinite;
+            animation-name: rotate-clock;
+            animation-duration: 0s;
+            animation-timing-function: linear;
+            animation-iteration-count: 0;
+            animation-duration: 0;
+        }
+
+        @keyframes rotate-clock {
+            font{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .hour-hand{
+            width: 25%;
+            height: 25px;
+            border-radius: 150%;
+            background-color:black;
+            position: absolute;
+            top: 49.6%;
+            left: 50%;
+            transform-origin: left;
+            animation: rotate-hour 86400s linear infinite;
+        }
+
+        @keyframes rotate-hour{
+            font{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .minute-hand{
+            width: 35%;
+            height: 15px;
+            border-radius: 100%;
+            background-color:black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: left;
+            animation: rotate-minute 3600s linear infinite;
+        }
+
+        @keyframes rotate-minute{
+            font{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .second-hand{
+            width: 40%;
+            height: 6px;
+            background-color:red;
+            position: absolute;
+            top: 50.6%;
+            left: 50%;
+            transform-origin: left;
+            animation: rotate-hour 60s linear infinite;
+        }
+
+        @keyframes rotate-second{
+            font{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+
+        .center-dot{
+            width: 30px;
+            height: 30px;
+            background-color:silver;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 49%;
+            margin-top: -6px;
+            margin-left: -6px;
+        }
+
+    </style>
+</head>
+<body style="background-color:antiquewhite;">
+    <div class="clock">
+        <div class="hour-hand"></div>
+        <div class="minute-hand"></div>
+        <div class="second-hand"></div>
+        <div class="center-dot"></div>
+    </div>
+
+    <p style="font-family: 'Fasthand', cursive; font-size:700%; text-align:center; margin-top: 0px;">The clock</p>
+</body>
+</html>
